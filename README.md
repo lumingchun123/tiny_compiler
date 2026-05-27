@@ -1,1 +1,1 @@
-This is an implement of a tiny compiler by Mingchun Lu.
+This is an implement of Tiny Compiler by Mingchun Lu.
