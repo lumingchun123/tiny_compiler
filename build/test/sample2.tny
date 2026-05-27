@@ -1,0 +1,6 @@
+read test
+
+repeat
+test = test + 1
+
+until test < 100
