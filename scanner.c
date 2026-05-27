@@ -51,7 +51,32 @@ int getNextChar(void)
 static void ungetNextChar(void)
 { if (!EOF_flag) linepos-- ;}
 
+int isop(const int c){
+  return (
+    c=='=' ||
+    c=='<' ||
+    c=='+' ||
+    c=='-' ||
+    c=='*' ||
+    c=='/' ||
+    c=='(' ||
+    c==')'
+  );
+}
 
+TokenType getop(const int c){
+  switch (c) {
+    case '=': return EQ;
+    case '<': return LT;
+    case '+': return PLUS;
+    case '-': return MINUS;
+    case '*': return TIMES;
+    case '/': return OVER;
+    case '(': return LPAREN;
+    case ')': return RPAREN;
+    default: return ERROR;
+  }
+}
 
 /* lookup table of reserved words */
 static struct

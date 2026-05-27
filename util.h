@@ -34,8 +34,5 @@ char * copyString( char * );
  */
 void printTree( TreeNode * );
 
-int isop(const int c);
-
-TokenType getop(const int c);
 
 #endif
