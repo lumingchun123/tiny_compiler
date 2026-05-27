@@ -1,0 +1,12 @@
+IF(if)
+ID(x)
+ERROR(>=)
+NUM(10)
+THEN(then)
+ID(y)
+ERROR(:)
+NUM(1)
+WRITE(write)
+ERROR(@)
+END(end)
+ENDFILE

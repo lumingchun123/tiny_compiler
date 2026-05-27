@@ -131,7 +131,7 @@ TokenType getToken(void)
            save = TRUE;
            state = INID;
          }
-         if (isdigit(c)) // 接收到非0数字，准备解析为NUM
+         else if (isdigit(c)) // 接收到非0数字，准备解析为NUM
          {
            save = TRUE;
            state = INNUM;
@@ -141,33 +141,43 @@ TokenType getToken(void)
            state = DONE;
            currentToken = ERROR;
          }*/
-         if (c==':'){
+         else if (c==':'){
            save = TRUE;
            state = INASSIGN;
            
          } // 进入定义状态
-         if (isop(c)){
+         else if (isop(c)){
            save = TRUE;
            state = DONE;
            currentToken = getop(c);
          }
-         if (c==EOF){
+         else if (c==EOF){
             save = TRUE;
             state = DONE;
             currentToken = ENDFILE;
          }
-         if (c==' '){
+         else if (c==' '){
             save = FALSE;
             state = START;
          }
-         if (c=='\n'){
+         else if (c=='\n'){
             save = FALSE;
             state = START;
          }
-         if (c=='\r'){
+         else if (c=='\r'){
             save = FALSE;
             state = START;
          }
+         else if (c=='\t'){
+            save = FALSE;
+            state = START;
+         }
+         else {
+          save = TRUE;
+          state = DONE;
+          currentToken = ERROR;
+         }
+         
          break;
        case INID:
          if (!isalpha(c))
@@ -203,7 +213,7 @@ TokenType getToken(void)
         }
         else {
           ungetNextChar();
-          save = FALSE;
+          save = TRUE;
           state = DONE;
           currentToken = ERROR;
 

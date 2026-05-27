@@ -1,0 +1,12 @@
+READ(read)
+ID(x)
+SEMI(;)
+ID(x)
+ASSIGN(:=)
+ID(x)
+PLUS(+)
+NUM(1)
+SEMI(;)
+WRITE(write)
+ID(x)
+ENDFILE

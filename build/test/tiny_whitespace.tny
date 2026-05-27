@@ -1,0 +1,4 @@
+read	count
+if	count < 3 then
+	write count
+end

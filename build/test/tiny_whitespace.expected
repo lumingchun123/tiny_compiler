@@ -1,0 +1,11 @@
+READ(read)
+ID(count)
+IF(if)
+ID(count)
+LT(<)
+NUM(3)
+THEN(then)
+WRITE(write)
+ID(count)
+END(end)
+ENDFILE

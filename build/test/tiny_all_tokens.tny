@@ -1,0 +1,10 @@
+read x
+if (x < 10) then
+    y := x + 1
+else
+    y := x - 1
+end
+repeat
+    y := y * 2 / (x + 1)
+until y = 20
+write y

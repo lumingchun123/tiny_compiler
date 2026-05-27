@@ -1,0 +1,4 @@
+{ compute a value }
+read x;
+x := x + 1; { bump }
+write x
